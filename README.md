@@ -2,17 +2,17 @@
 
 # [![Eluna](src/LuaEngine/docs/Eluna.png)](https://github.com/ElunaLuaEngine/Eluna)
 
-*Unleash the power of Lua scripting in your AzerothCore server*
+*Unleash the power of Lua scripting in your SylCore server*
 
 [![Discord](https://img.shields.io/badge/Discord-Join%20Us-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/ZKSVREE7)
 [![Lua](https://img.shields.io/badge/Lua-5.2-2C2D72?style=for-the-badge&logo=lua&logoColor=white)](http://www.lua.org/manual/5.2/)
-[![AzerothCore](https://img.shields.io/badge/AzerothCore-Integrated-darkgreen?style=for-the-badge)](http://www.azerothcore.org/)
+[![SylCore](https://img.shields.io/badge/AzerothCore-Integrated-darkgreen?style=for-the-badge)](http://www.azerothcore.org/)
 
 ---
 </div>
 
 > [!NOTE]
-> mod-eluna © is a powerful Lua scripting engine embedded into the AzerothCore emulator. We are committed to continuously improving mod-eluna for both developers and server administrators.
+> sylcore-eluna © is a powerful Lua scripting engine embedded into the SylCore emulator. We are committed to continuously improving sylcore-eluna for both developers and server administrators.
 
 <details>
 <summary>🎯 Table of Contents</summary>
@@ -32,7 +32,7 @@
 ***Built on the shoulders of giants***
 </div>
 
-mod-eluna is a fork of the original [Eluna](https://github.com/ElunaLuaEngine/Eluna) project. We extend our heartfelt gratitude to the Eluna team for their work.
+sylcore-eluna is a fork of the original [Eluna](https://github.com/ElunaLuaEngine/Eluna) project. We extend our heartfelt gratitude to the Eluna team for their work.
 
 > **Explore More:**
 > - [Original Github](https://github.com/ElunaLuaEngine/Eluna)
@@ -52,7 +52,7 @@ Feel free to open an issue for installation or scripting problems.
 ## ⚡ Installation
 
 ### Prerequisites
-- AzerothCore installation
+- SylCore installation
 - Git
 - CMake
 
