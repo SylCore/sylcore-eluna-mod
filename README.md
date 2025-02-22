@@ -62,7 +62,7 @@ Feel free to open an issue for installation or scripting problems.
 cd modules
 
 # Clone the repository
-git clone https://github.com/azerothcore/mod-eluna.git
+git clone https://github.com/SylCore/sylcore-eluna-mod.git
 
 # Build using CMake
 # You can choose your Lua version during cmake configuration using:
@@ -128,8 +128,6 @@ CharDBQueryAsync
 AuthDBQueryAsync
 ```
 </details>
-
-> For a complete list of community contributions, check our [Community Updates](https://github.com/azerothcore/mod-eluna/blob/master/COMMUNITY_UPDATES.md).
 
 ## 🤝 Contributing
 
