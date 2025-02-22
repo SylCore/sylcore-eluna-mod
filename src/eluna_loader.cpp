@@ -19,7 +19,7 @@
 void AddSC_ElunaLuaEngine();
 
 // Add all
-void Addmod_elunaScripts()
+void Addsylcore_eluna_modScripts()
 {
     AddSC_ElunaLuaEngine();
 }
