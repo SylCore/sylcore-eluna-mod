@@ -774,6 +774,7 @@ ElunaRegister<Creature> CreatureMethods[] =
     { "GetRespawnDelay", &LuaCreature::GetRespawnDelay },
     { "GetWanderRadius", &LuaCreature::GetWanderRadius },
     { "GetCurrentWaypointId", &LuaCreature::GetCurrentWaypointId },
+	{ "GetCreatureSpawnId", &LuaCreature::GetCreatureSpawnId },   // SylCore Implementation.
     { "GetWaypointPath", &LuaCreature::GetWaypointPath },
     { "GetLootMode", &LuaCreature::GetLootMode },
     { "GetLootRecipient", &LuaCreature::GetLootRecipient },
@@ -792,6 +793,7 @@ ElunaRegister<Creature> CreatureMethods[] =
     { "SetHover", &LuaCreature::SetHover },
     { "SetDisableGravity", &LuaCreature::SetDisableGravity },
     { "SetAggroEnabled", &LuaCreature::SetAggroEnabled },
+	{ "SetCorpseDelay", &LuaCreature::SetCorpseDelay },   // SylCore Implementation.
     { "SetNoCallAssistance", &LuaCreature::SetNoCallAssistance },
     { "SetNoSearchAssistance", &LuaCreature::SetNoSearchAssistance },
     { "SetDefaultMovementType", &LuaCreature::SetDefaultMovementType },

@@ -45,7 +45,7 @@ namespace LuaGlobalFunctions
     /**
      * Returns emulator's name.
      *
-     * The result will be either `MaNGOS`, `cMaNGOS`, or `TrinityCore`.
+     * The result will be SylCore.
      *
      * @return string coreName
      */
@@ -59,6 +59,7 @@ namespace LuaGlobalFunctions
     /**
      * Returns config value as a string.
      *
+     * @param string name : name of the value
      * @return string value
      */
     int GetConfigValue(lua_State* L)
