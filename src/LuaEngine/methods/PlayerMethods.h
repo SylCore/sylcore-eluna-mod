@@ -3130,6 +3130,12 @@ namespace LuaPlayer
         return 1;
     }
 
+    /**
+     * Adds the given amount of kills to the players total lifetime kills.
+	 * These kills are honorable kills, not PVE kills.
+     *
+     * @param uint32 amount : amount of kills to add.
+     */
     int AddLifetimeKills(lua_State* L, Player* player)
     {
         uint32 val = Eluna::CHECKVAL<uint32>(L, 2);

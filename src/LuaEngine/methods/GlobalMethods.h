@@ -81,11 +81,8 @@ namespace LuaGlobalFunctions
     /**
      * Returns emulator .conf RealmID
      *
-     * - for MaNGOS returns the realmID as it is stored in the core.
-     * - for TrinityCore returns the realmID as it is in the conf file.
      * @return uint32 realm ID
      */
-
     int GetRealmID(lua_State* L)
     {
         Eluna::Push(L, sConfigMgr->GetOption<uint32>("RealmID", 1));
