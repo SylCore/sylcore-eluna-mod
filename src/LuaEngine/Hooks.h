@@ -226,7 +226,7 @@ namespace Hooks
         PLAYER_EVENT_ON_CAN_UPDATE_SKILL        =     60,       // (event, player, skill_id) -- Can return true or false
         PLAYER_EVENT_ON_BEFORE_UPDATE_SKILL     =     61,       // (event, player, skill_id, value, max, step) -- Can return new amount
         PLAYER_EVENT_ON_UPDATE_SKILL            =     62,       // (event, player, skill_id, value, max, step, new_value)
-
+        PLAYER_EVENT_ON_PLAYER_JUST_DIED        =     63,       // (event, player)
         PLAYER_EVENT_COUNT
     };
 

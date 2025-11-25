@@ -178,6 +178,18 @@ void Eluna::OnPlayerKilledByCreature(Creature* pKiller, Player* pKilled)
     CallAllFunctions(PlayerEventBindings, key);
 }
 
+/// <summary>
+/// Custom to SylCore.
+/// </summary>
+/// <param name="pPlayer"></param>
+void Eluna::OnPlayerJustDied(Player* pPlayer)
+{
+    START_HOOK(PLAYER_EVENT_ON_PLAYER_JUST_DIED);
+    Push(pPlayer);
+    CallAllFunctions(PlayerEventBindings, key);
+}
+
+
 void Eluna::OnLevelChanged(Player* pPlayer, uint8 oldLevel)
 {
     START_HOOK(PLAYER_EVENT_ON_LEVEL_CHANGE);
