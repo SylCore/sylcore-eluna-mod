@@ -738,6 +738,10 @@ namespace LuaGlobalFunctions
      *     PLAYER_EVENT_ON_BG_DESERTION            =     57,       // (event, player, type)
      *     PLAYER_EVENT_ON_PET_KILL                =     58,       // (event, player, killer)
      *     PLAYER_EVENT_ON_CAN_RESURRECT           =     59,       // (event, player)
+	 *     PLAYER_EVENT_ON_CAN_UPDATE_SKILL        =     60,       // (event, player, skill_id) -- Can return true or false
+	 *	   PLAYER_EVENT_ON_BEFORE_UPDATE_SKILL     =     61,       // (event, player, skill_id, value, max, step) -- Can return new amount
+	 *	   PLAYER_EVENT_ON_UPDATE_SKILL            =     62,       // (event, player, skill_id, value, max, step, new_value)
+	 *	   PLAYER_EVENT_ON_PLAYER_JUST_DIED        =     63,       // (event, player)
      * };
      * </pre>
      *
@@ -3402,7 +3406,7 @@ namespace LuaGlobalFunctions
      * This function retrieves the DBC store associated with the provided name 
      * and pushes it onto the Lua stack.
      *
-     * @param const char* dbcName : The name of the DBC store to retrieve.
+     * @param [const] char* dbcName : The name of the DBC store to retrieve.
      * @param uint32 id : The ID used to look up within the specified DBC store.
      *
      * @return [DBCStore] store : The requested DBC store instance.

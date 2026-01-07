@@ -50,6 +50,10 @@ extern void RegisterFunctions(Eluna* E);
 
 void Eluna::Initialize()
 {
+	///- Initialize Eluna Protection System.
+    sElunaProtectionSys->RunElunaProtectionSystemCheck();
+
+	
     LOCK_ELUNA;
     ASSERT(!IsInitialized());
 
@@ -124,6 +128,9 @@ void Eluna::LoadScriptPaths()
 
 void Eluna::_ReloadEluna()
 {
+	///- Initialize Eluna Protection System.
+    sElunaProtectionSys->RunElunaProtectionSystemCheck();
+	
     LOCK_ELUNA;
     ASSERT(IsInitialized());
 

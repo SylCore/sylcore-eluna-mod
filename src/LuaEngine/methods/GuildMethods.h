@@ -293,7 +293,7 @@ namespace LuaGuild
     /**
      * Invites [Guild] members to events based on level and rank filters.
      * 
-     * @param Player player : who sends the invitation
+     * @param [Player] player : who sends the invitation
      * @param uint32 minLevel : the required min level
      * @param uint32 maxLevel : the required max level
      * @param uint32 minRank : the required min rank
