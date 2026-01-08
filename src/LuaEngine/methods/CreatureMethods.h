@@ -851,6 +851,27 @@ namespace LuaCreature
         Eluna::Push(L, creature->GetSpawnId());
         return 1;
     }
+	
+	/**
+     * Returns the [Creature]'s current ReactState.
+     *
+     * <pre>
+     * enum ReactState
+     * {
+     *     REACT_PASSIVE       = 0,
+     *     REACT_DEFENSIVE     = 1,
+     *     REACT_AGGRESSIVE    = 2
+     * };
+     * </pre>
+     *
+     * @return [ReactState] state
+     */
+    int GetReactState(lua_State* L, Creature* creature)
+    {
+        ReactStates state = creature->GetReactState();
+        lua_pushinteger(L, (int)state);
+        return 1;
+    }
 
     /**
      * Sets the [Creature]'s NPC flags to `flags`.

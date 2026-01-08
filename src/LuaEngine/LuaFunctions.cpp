@@ -544,6 +544,7 @@ ElunaRegister<Player> PlayerMethods[] =
     { "GetPlayerSettingValue", &LuaPlayer::GetPlayerSettingValue },
     { "GetTrader", &LuaPlayer::GetTrader },
     { "GetBonusTalentCount", &LuaPlayer::GetBonusTalentCount },
+	{ "GetKnownTaxiNodes", &LuaPlayer::GetKnownTaxiNodes },
 
     // Setters
     { "AdvanceSkillsToMax", &LuaPlayer::AdvanceSkillsToMax },
@@ -560,6 +561,7 @@ ElunaRegister<Player> PlayerMethods[] =
     { "SetLifetimeKills", &LuaPlayer::SetLifetimeKills },
     { "SetGameMaster", &LuaPlayer::SetGameMaster },
     { "SetGMChat", &LuaPlayer::SetGMChat },
+	{ "SetKnownTaxiNodes", &LuaPlayer::SetKnownTaxiNodes },
     { "SetTaxiCheat", &LuaPlayer::SetTaxiCheat },
     { "SetGMVisible", &LuaPlayer::SetGMVisible },
     { "SetPvPDeath", &LuaPlayer::SetPvPDeath },
@@ -787,6 +789,7 @@ ElunaRegister<Creature> CreatureMethods[] =
     { "GetShieldBlockValue", &LuaCreature::GetShieldBlockValue },
     { "GetDBTableGUIDLow", &LuaCreature::GetDBTableGUIDLow },
     { "GetCreatureFamily", &LuaCreature::GetCreatureFamily },
+	{ "GetReactState", &LuaCreature::GetReactState },
 
     // Setters
     { "SetRegeneratingHealth", &LuaCreature::SetRegeneratingHealth },
@@ -930,6 +933,8 @@ ElunaRegister<Item> ItemMethods[] =
     { "SetOwner", &LuaItem::SetOwner },
     { "SetBinding", &LuaItem::SetBinding },
     { "SetCount", &LuaItem::SetCount },
+	{ "SetRandomProperty", &LuaItem::SetRandomProperty },
+    { "SetRandomSuffix", &LuaItem::SetRandomSuffix },
 
     // Boolean
     { "IsSoulBound", &LuaItem::IsSoulBound },
