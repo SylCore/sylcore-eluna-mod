@@ -792,7 +792,7 @@ ElunaRegister<Creature> CreatureMethods[] =
     { "GetCreatureFamily", &LuaCreature::GetCreatureFamily },
 	{ "GetReactState", &LuaCreature::GetReactState },
     { "GetLoot", &LuaCreature::GetLoot },
-    { "AllLootRemoved", &LuaCreature::AllLootRemoved },
+    { "AllLootRemovedFromCorpse", &LuaCreature::AllLootRemovedFromCorpse },
 
     // Setters
     { "SetRegeneratingHealth", &LuaCreature::SetRegeneratingHealth },

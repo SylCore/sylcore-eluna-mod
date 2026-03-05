@@ -456,7 +456,11 @@ namespace LuaCreature
         return 1;
     }
 
-    int AllLootRemoved(lua_State* /*L*/, Creature* creature)
+    /**
+    * Handles this [Creature]´s corpse state after all loot has been removed from it.
+    * 
+    */
+    int AllLootRemovedFromCorpse(lua_State* /*L*/, Creature* creature)
     {
         creature->AllLootRemovedFromCorpse();
         return 0;
