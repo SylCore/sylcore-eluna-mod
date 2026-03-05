@@ -29,6 +29,7 @@ extern "C"
 #include "ElunaQueryMethods.h"
 #include "AuraMethods.h"
 #include "ItemMethods.h"
+#include "LootMethods.h"
 #include "WorldPacketMethods.h"
 #include "SpellMethods.h"
 #include "QuestMethods.h"
@@ -790,6 +791,8 @@ ElunaRegister<Creature> CreatureMethods[] =
     { "GetDBTableGUIDLow", &LuaCreature::GetDBTableGUIDLow },
     { "GetCreatureFamily", &LuaCreature::GetCreatureFamily },
 	{ "GetReactState", &LuaCreature::GetReactState },
+    { "GetLoot", &LuaCreature::GetLoot },
+    { "AllLootRemoved", &LuaCreature::AllLootRemoved },
 
     // Setters
     { "SetRegeneratingHealth", &LuaCreature::SetRegeneratingHealth },
@@ -1337,6 +1340,50 @@ ElunaRegister<Roll> RollMethods[] =
     { NULL, NULL }
 };
 
+ElunaRegister<Loot> LootMethods[] =
+{
+    // Get
+    { "GetMoney", &LuaLoot::GetMoney },
+    { "GetItems", &LuaLoot::GetItems },
+    { "GetQuestItems", &LuaLoot::GetQuestItems },
+    { "GetUnlootedCount", &LuaLoot::GetUnlootedCount },
+    { "GetLootType", &LuaLoot::GetLootType },
+    { "GetRoundRobinPlayer", &LuaLoot::GetRoundRobinPlayer },
+    { "GetLootOwner", &LuaLoot::GetLootOwner },
+    { "GetContainer", &LuaLoot::GetContainer },
+    { "GetSourceWorldObject", &LuaLoot::GetSourceWorldObject },
+    { "GetItemCount", &LuaLoot::GetItemCount },
+    { "GetMaxSlotForPlayer", &LuaLoot::GetMaxSlotForPlayer },
+
+    // Set
+    { "AddItem", &LuaLoot::AddItem },
+    { "RemoveItem", &LuaLoot::RemoveItem },
+    { "SetMoney", &LuaLoot::SetMoney },
+    { "SetUnlootedCount", &LuaLoot::SetUnlootedCount },
+    { "UpdateItemIndex", &LuaLoot::UpdateItemIndex },
+    { "SetItemLooted", &LuaLoot::SetItemLooted },
+    { "SetLootType", &LuaLoot::SetLootType },
+    { "SetRoundRobinPlayer", &LuaLoot::SetRoundRobinPlayer },
+    { "SetLootOwner", &LuaLoot::SetLootOwner },
+    { "SetContainer", &LuaLoot::SetContainer },
+    { "SetSourceWorldObject", &LuaLoot::SetSourceWorldObject },
+    { "Clear", &LuaLoot::Clear },
+    { "AddLooter", &LuaLoot::AddLooter },
+    { "RemoveLooter", &LuaLoot::RemoveLooter },
+    { "RefreshForPlayer", &LuaLoot::RefreshForPlayer },
+
+    // Boolean
+    { "HasItem", &LuaLoot::HasItem },
+    { "HasQuestItems", &LuaLoot::HasQuestItems },
+    { "HasItemForAll", &LuaLoot::HasItemForAll },
+    { "HasOverThresholdItem", &LuaLoot::HasOverThresholdItem },
+    { "IsLooted", &LuaLoot::IsLooted },
+    { "IsEmpty", &LuaLoot::IsEmpty },
+
+    { NULL, NULL }
+};
+
+
 ElunaRegister<GmTicket> TicketMethods[] =
 {
     { "IsClosed", &LuaTicket::IsClosed },
@@ -1610,6 +1657,9 @@ template<> int ElunaTemplate<long long>::ToString(lua_State* L)
 void RegisterFunctions(Eluna* E)
 {
     ElunaGlobal::SetMethods(E, GlobalMethods);
+
+    ElunaTemplate<Loot>::Register(E, "Loot");
+    ElunaTemplate<Loot>::SetMethods(E, LootMethods);
 
     ElunaTemplate<Object>::Register(E, "Object");
     ElunaTemplate<Object>::SetMethods(E, ObjectMethods);
