@@ -28,6 +28,7 @@ extern "C"
 #include "GameObjectMethods.h"
 #include "ElunaQueryMethods.h"
 #include "AuraMethods.h"
+#include "PetMethods.h"
 #include "ItemMethods.h"
 #include "LootMethods.h"
 #include "WorldPacketMethods.h"
@@ -865,6 +866,65 @@ ElunaRegister<Creature> CreatureMethods[] =
     { NULL, NULL }
 };
 
+ElunaRegister<Pet> PetMethods[] =
+{
+    // Getters
+    { "GetPetType", &LuaPet::GetPetType },
+    { "GetDuration", &LuaPet::GetDuration },
+    { "GetHappinessState", &LuaPet::GetHappinessState },
+    { "GetCurrentFoodBenefitLevel", &LuaPet::GetCurrentFoodBenefitLevel },
+    { "GetMaxTalentPointsForLevel", &LuaPet::GetMaxTalentPointsForLevel },
+    { "GetFreeTalentPoints", &LuaPet::GetFreeTalentPoints },
+    { "GetUsedTalentCount", &LuaPet::GetUsedTalentCount },
+    { "GetAuraUpdateMaskForRaid", &LuaPet::GetAuraUpdateMaskForRaid },
+    { "GetOwner", &LuaPet::GetOwner },
+    { "GetPetAutoSpellSize", &LuaPet::GetPetAutoSpellSize },
+    { "GetPetAutoSpellOnPos", &LuaPet::GetPetAutoSpellOnPos },
+
+    // Setters
+    { "SetPetType", &LuaPet::SetPetType },
+    { "SetDuration", &LuaPet::SetDuration },
+    { "SetFreeTalentPoints", &LuaPet::SetFreeTalentPoints },
+    { "SetUsedTalentCount", &LuaPet::SetUsedTalentCount },
+    { "SetAuraUpdateMaskForRaid", &LuaPet::SetAuraUpdateMaskForRaid },
+    { "SetRemoved", &LuaPet::SetRemoved },
+
+    // Boolean
+    { "IsControlled", &LuaPet::IsControlled },
+    { "IsTemporarySummoned", &LuaPet::IsTemporarySummoned },
+    { "IsPermanentPetFor", &LuaPet::IsPermanentPetFor },
+    { "HaveInDiet", &LuaPet::HaveInDiet },
+    { "HasTempSpell", &LuaPet::HasTempSpell },
+    { "IsRemoved", &LuaPet::IsRemoved },
+    { "IsBeingLoaded", &LuaPet::IsBeingLoaded },
+
+    // Other
+    { "CreateBaseAtCreature", &LuaPet::CreateBaseAtCreature },
+    { "GivePetXP", &LuaPet::GivePetXP },
+    { "GivePetLevel", &LuaPet::GivePetLevel },
+    { "SynchronizeLevelWithOwner", &LuaPet::SynchronizeLevelWithOwner },
+    { "ToggleAutocast", &LuaPet::ToggleAutocast },
+    { "LearnPetPassives", &LuaPet::LearnPetPassives },
+    { "CastWhenWillAvailable", &LuaPet::CastWhenWillAvailable },
+    { "ClearCastWhenWillAvailable", &LuaPet::ClearCastWhenWillAvailable },
+    { "AddSpell", &LuaPet::AddSpell },
+    { "LearnSpell", &LuaPet::LearnSpell },
+    { "LearnSpellHighRank", &LuaPet::LearnSpellHighRank },
+    { "InitLevelupSpellsForLevel", &LuaPet::InitLevelupSpellsForLevel },
+    { "UnlearnSpell", &LuaPet::UnlearnSpell },
+    { "RemoveSpell", &LuaPet::RemoveSpell },
+    { "CleanupActionBar", &LuaPet::CleanupActionBar },
+    { "GenerateActionBarData", &LuaPet::GenerateActionBarData },
+    { "InitPetCreateSpells", &LuaPet::InitPetCreateSpells },
+    { "ResetTalents", &LuaPet::ResetTalents },
+    { "InitTalentForLevel", &LuaPet::InitTalentForLevel },
+    { "ResetAuraUpdateMaskForRaid", &LuaPet::ResetAuraUpdateMaskForRaid },
+    { "SavePetToDB", &LuaPet::SavePetToDB },
+    { "Remove", &LuaPet::Remove },
+
+    { NULL, NULL }
+};
+
 ElunaRegister<GameObject> GameObjectMethods[] =
 {
     // Getters
@@ -1684,6 +1744,11 @@ void RegisterFunctions(Eluna* E)
     ElunaTemplate<Creature>::SetMethods(E, WorldObjectMethods);
     ElunaTemplate<Creature>::SetMethods(E, UnitMethods);
     ElunaTemplate<Creature>::SetMethods(E, CreatureMethods);
+	
+	ElunaTemplate<Creature>::Register(E, "Pet");
+    ElunaTemplate<Creature>::SetMethods(E, ObjectMethods);
+    ElunaTemplate<Creature>::SetMethods(E, WorldObjectMethods);
+    ElunaTemplate<Creature>::SetMethods(E, UnitMethods);
 
     ElunaTemplate<GameObject>::Register(E, "GameObject");
     ElunaTemplate<GameObject>::SetMethods(E, ObjectMethods);
