@@ -1749,6 +1749,7 @@ void RegisterFunctions(Eluna* E)
     ElunaTemplate<Creature>::SetMethods(E, ObjectMethods);
     ElunaTemplate<Creature>::SetMethods(E, WorldObjectMethods);
     ElunaTemplate<Creature>::SetMethods(E, UnitMethods);
+    ElunaTemplate<Creature>::SetMethods(E, CreatureMethods);
 
     ElunaTemplate<GameObject>::Register(E, "GameObject");
     ElunaTemplate<GameObject>::SetMethods(E, ObjectMethods);
