@@ -644,6 +644,12 @@ public:
         sEluna->OnPlayerJustDied(player);
     }
 
+	// Sylcore feature.
+    // Adds in feature for when a player died, no matter the way they were killed.
+    void OnPlayerTargetChanged(Player* player, Unit* oldTarget, Unit* newTarget) override
+    {
+        sEluna->OnPlayerTargetChanged(player, oldTarget, newTarget);
+    }
 
     void OnPlayerLevelChanged(Player* player, uint8 oldLevel) override
     {

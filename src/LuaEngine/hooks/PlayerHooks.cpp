@@ -189,6 +189,19 @@ void Eluna::OnPlayerJustDied(Player* pPlayer)
     CallAllFunctions(PlayerEventBindings, key);
 }
 
+/// <summary>
+/// Custom to SylCore.
+/// </summary>
+/// <param name="pPlayer"></param>
+void Eluna::OnPlayerTargetChanged(Player* pPlayer, Unit* pOldTarget, Unit* pNewTarget)
+{
+    START_HOOK(PLAYER_EVENT_ON_TARGET_CHANGED);
+    Push(pPlayer);
+    Push(pOldTarget);
+    Push(pNewTarget);
+    CallAllFunctions(PlayerEventBindings, key);
+}
+
 
 void Eluna::OnLevelChanged(Player* pPlayer, uint8 oldLevel)
 {
