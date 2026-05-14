@@ -44,7 +44,7 @@ sylcore-eluna is a fork of the original [Eluna](https://github.com/ElunaLuaEngin
 Feel free to open an issue for installation or scripting problems.
 
 ### Quick Links
-- 📚 [mod-eluna API](https://www.azerothcore.org/eluna/)
+- 📚 [mod-eluna API](https://eluna.sylcore.org)
 - 📖 [Lua Reference](http://www.lua.org/manual/5.2/)
 
 </div>
@@ -81,11 +81,11 @@ cmake ../ -DLUA_VERSION=luajit
 - [Getting Started](https://github.com/ElunaLuaEngine/Eluna/blob/master/docs/USAGE.md)
 - [Eluna Features](https://github.com/ElunaLuaEngine/Eluna/blob/master/docs/IMPL_DETAILS.md)
 
-### AzerothCore
-- [mod-eluna API](https://www.azerothcore.org/eluna/)
-- [Hooks Documentation](https://github.com/azerothcore/mod-eluna/blob/master/src/LuaEngine/Hooks.h)
+### SylCore
+- [mod-eluna API](https://eluna.sylcore.org)
+- [Hooks Documentation](https://github.com/SylCore/sylcore-eluna-mod/blob/master/src/LuaEngine/Hooks.h)
 
-### Others emulators (TC, MaNGOS, CMaNGOS etc.)
+### Other emulators (TC, MaNGOS, CMaNGOS etc.)
 - [Eluna API](https://elunaluaengine.github.io/index.html)
 - [Hooks Documentation](https://github.com/ElunaLuaEngine/Eluna/blob/master/hooks/Hooks.h)
 
@@ -96,7 +96,7 @@ cmake ../ -DLUA_VERSION=luajit
 - [🎮 MaNGOS](https://www.getmangos.eu/)
 - [🎮 cMaNGOS](https://cmangos.net/)
 - [🎮 TrinityCore](https://www.trinitycore.org/)
-- [🎮 AzerothCore](http://www.azerothcore.org/)
+- [🎮 SylCore](https://sylcore.org)
 
 ## 🛠️ Community Additions
 
