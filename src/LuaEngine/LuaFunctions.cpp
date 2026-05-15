@@ -549,6 +549,10 @@ ElunaRegister<Player> PlayerMethods[] =
     { "GetTrader", &LuaPlayer::GetTrader },
     { "GetBonusTalentCount", &LuaPlayer::GetBonusTalentCount },
 	{ "GetKnownTaxiNodes", &LuaPlayer::GetKnownTaxiNodes },
+    { "GetPet", &LuaPlayer::GetPet },
+    { "GetTemporaryUnsummonedPetNumber", &LuaPlayer::GetTemporaryUnsummonedPetNumber },
+    { "GetLastPetNumber", &LuaPlayer::GetLastPetNumber },
+    { "GetLastPetSpell", &LuaPlayer::GetLastPetSpell },
 
     // Setters
     { "AdvanceSkillsToMax", &LuaPlayer::AdvanceSkillsToMax },
@@ -583,6 +587,10 @@ ElunaRegister<Player> PlayerMethods[] =
     { "SetPlayerLock", &LuaPlayer::SetPlayerLock },
     { "SetGender", &LuaPlayer::SetGender },
     { "SetSheath", &LuaPlayer::SetSheath },
+    { "SetTemporaryUnsummonedPetNumber", &LuaPlayer::SetTemporaryUnsummonedPetNumber },
+    { "SetLastPetNumber", &LuaPlayer::SetLastPetNumber },
+    { "SetLastPetSpell", &LuaPlayer::SetLastPetSpell },
+    { "SetShowDKPet", &LuaPlayer::SetShowDKPet },
     { "SetBonusTalentCount", &LuaPlayer::SetBonusTalentCount },
     { "AddBonusTalent", &LuaPlayer::AddBonusTalent },
     { "RemoveBonusTalent", &LuaPlayer::RemoveBonusTalent },
@@ -658,6 +666,12 @@ ElunaRegister<Player> PlayerMethods[] =
     { "CanFly", &LuaPlayer::CanFly },
     { "IsMoving", &LuaPlayer::IsMoving },
     { "IsFlying", &LuaPlayer::IsFlying },
+    { "CanPetResurrect", &LuaPlayer::CanPetResurrect },
+    { "IsExistPet", &LuaPlayer::IsExistPet },
+    { "CanTameExoticPets", &LuaPlayer::CanTameExoticPets },
+    { "IsPetNeedBeTemporaryUnsummoned", &LuaPlayer::IsPetNeedBeTemporaryUnsummoned },
+    { "CanResummonPet", &LuaPlayer::CanResummonPet },
+    { "CanSeeDKPet", &LuaPlayer::CanSeeDKPet },
 
     // Gossip
     { "GossipMenuAddItem", &LuaPlayer::GossipMenuAddItem },
@@ -759,6 +773,13 @@ ElunaRegister<Player> PlayerMethods[] =
     { "SendMovieStart", &LuaPlayer::SendMovieStart },
     { "UpdatePlayerSetting", &LuaPlayer::UpdatePlayerSetting },
     { "TeleportTo", &LuaPlayer::TeleportTo },
+    { "SummonPet", &LuaPlayer::SummonPet },
+    { "CreatePet", &LuaPlayer::CreatePet },
+    { "UnsummonPetTemporarily", &LuaPlayer::UnsummonPetTemporarily },
+    { "RemovePet", &LuaPlayer::RemovePet },
+    { "ResetPetTalents", &LuaPlayer::ResetPetTalents },
+    { "LearnPetTalent", &LuaPlayer::LearnPetTalent },
+    { "ResummonPetTemporaryUnSummonedIfAny", &LuaPlayer::ResummonPetTemporaryUnSummonedIfAny },
 
     { NULL, NULL }
 };
